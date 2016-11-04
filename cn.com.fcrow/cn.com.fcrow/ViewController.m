@@ -321,9 +321,8 @@
     if (topDragViewY == Y) {
         selectView.frame = CGRectMake(0, 0, BOUNDS.size.width, CGRectGetHeight(selectView.frame));
         titleView.alpha = 1.0 ;
-        dragView.frame = CGRectMake(0,Y,BOUNDS.size.width,BOUNDS.size.height-Y);
-        dragTableView.frame = CGRectMake(0, dragTipBtnLength, BOUNDS.size.width, BOUNDS.size.height  -CGRectGetMinY(dragTableView.frame) - Y -((dragTipBtnLength-dragBottomLength)) );
-        
+        dragView.frame = CGRectMake(0,Y,BOUNDS.size.width,BOUNDS.size.height-titleHight);
+        dragTableView.frame = CGRectMake(0, dragTipBtnLength, BOUNDS.size.width, BOUNDS.size.height  -CGRectGetMinY(dragView.frame) - dragTipBtnLength);
     }else {
         selectView.frame = CGRectMake(0, dragTipBtnLength, BOUNDS.size.width, CGRectGetHeight(selectView.frame));
         titleView.alpha = 0.0 ;
